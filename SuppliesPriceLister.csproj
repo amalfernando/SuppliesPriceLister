@@ -14,7 +14,9 @@
 
   <ItemGroup>
     <EmbeddedResource Include="megacorp.json" />
-    <EmbeddedResource Include="humphries.csv" />
+    <EmbeddedResource Include="humphries.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>

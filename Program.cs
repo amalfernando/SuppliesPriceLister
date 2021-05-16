@@ -37,11 +37,11 @@ namespace SuppliesPriceLister
                 .ToList()
                 .OrderByDescending(s => s.PriceInCent);
 
-            Console.WriteLine("{0}  {1}  {2}", "[Id]", "[Item Name]", "[Price]");
+            Console.WriteLine("{0}  {1}  {2}", $"{"[Id]", -36}", $"{"[Item Name]", -50}", $"{"[Price]", 10}");
 
             foreach (Supply supply in sortedSuppliesData)
             {
-                Console.WriteLine("{0}, {1}, {2}", supply.Id, supply.ItemName, supply.PriceInDollar);
+                Console.WriteLine("{0}  {1}  {2}", $"{supply.Id, -36}", $"{supply.ItemName, -50}", $"{supply.PriceInDollar, 10:C}");
             }
         }
     }
